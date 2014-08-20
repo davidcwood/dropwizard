@@ -708,8 +708,8 @@ public class DataSourceFactory {
         poolConfig.setMinEvictableIdleTimeMillis((int) minIdleTime.toMilliseconds());
         poolConfig.setName(name);
         poolConfig.setUrl(url);
-        poolConfig.setUsername(user);
-        poolConfig.setPassword(password);
+        poolConfig.setUsername(getUser());
+        poolConfig.setPassword(getPassword());
         poolConfig.setTestWhileIdle(checkConnectionWhileIdle);
         poolConfig.setValidationQuery(validationQuery);
         poolConfig.setTestOnBorrow(checkConnectionOnBorrow);
